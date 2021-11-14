@@ -1,0 +1,13 @@
+.container{
+    width: 100vh;
+
+}
+.content {
+    height: 30vh;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 48px;
+    user-select: none;
+  }

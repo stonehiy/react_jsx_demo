@@ -1,41 +1,32 @@
 import logo from './logo.svg';
 import './App.css';
-import { BrowserRouter as Router, Route, Redirect, Switch, Link } from 'react-router-dom';
+import React, { Component,} from 'react'
 
+import { renderRoutes } from "react-router-config";
+import { BrowserRouter as Router,  } from "react-router-dom";
+import routes from './route/routes'
 
-import React, { Component, } from 'react'
+import Bottom from './component/bottom/bottom'
 
-import Deme1 from './pages/demo1'
-import Deme2 from './pages/demo2'
 
 class App extends Component {
+
+
+  
+
+
   render() {
+   
     return (
-
-      <div className="App">
-
-        <Router>
-          <div>
-            <Link to="/demo1">demo1</Link>
-            <Link to="/demo2">demo2</Link>
-            <div>
-              <Switch>
-                <Route path="/demo1">
-                  <Deme1 />
-                </Route>
-                <Route path="/demo2">
-                  <Deme2 />
-                </Route>
-                <Redirect exact from="/" to="/home" />
-              </Switch>
-            </div>
+      <Router>
+        <div className="app">
+          <div className="body">
+            {renderRoutes(routes)}
           </div>
-        </Router>
+          <Bottom className='bottom'  />
 
-
-
-
-      </div >
+        </div>
+      </Router>
     )
   }
 }
