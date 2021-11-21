@@ -15,33 +15,33 @@ class Bottom extends Component {
     state = {
         tabs: [
             {
-                key: '/',
+                key: 'home',
                 title: '首页',
                 icon: <AppOutline />,
                 badge: Badge.dot,
             },
             {
-                key: '/demo1',
+                key: 'home1',
                 title: '我的待办',
                 icon: <UnorderedListOutline />,
                 badge: '5',
             },
             {
-                key: '/demo2',
-                title: '我的消息',
+                key: 'demo2',
+                title: 'home2',
                 icon: (active) =>
                     active ? <MessageFill /> : <MessageOutline />,
                 badge: '99+',
             },
             {
-                key: '/demo3',
+                key: 'home3',
                 title: '个人中心',
                 icon: <UserOutline />,
             },
         ]
     }
     setRouteActive(value) {
-        this.props.history.push(value)
+        this.props.history.push("/"+value)
 
     }
     render() {

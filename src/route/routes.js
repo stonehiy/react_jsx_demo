@@ -1,22 +1,38 @@
 import Home from '../pages/home/home'
 import Demo1 from '../pages/demo1/demo1'
 import Demo2 from '../pages/demo2/demo2'
+import Main from '../pages/main'
+import Home1 from '../pages/home1/home1'
 
 const routes = [
     {
         path: '/',
-        component: Home,
+        component: Main,
         exact: true,
-        meta: { title: 'Home' },
+        meta: { title: 'Main' },
         routes: [
+
+            {
+                path: '/home',
+                component: Home,
+                meta: { title: 'home' },
+                exact: true,
+            },
             {
                 path: '/home1',
-                component: Home
+                component: Home1,
+                meta: { title: 'home1' },
             },
             {
                 path: '/home2',
-                component: Home
-            }
+                component: Home1,
+                meta: { title: 'home2' },
+            },
+            {
+                path: '/home3',
+                component: Home1,
+                meta: { title: 'home3' },
+            },
         ]
     },
     {
